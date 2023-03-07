@@ -1,9 +1,11 @@
 <h1><%= @show.venue %></h1>
-<h2><%= @show.date %></h2>
+<h2><%= @show.date.strftime('%m-%d-%Y') %></h2>
+<h2>TOTAL SALES:</h2>
+<h2><%= @show.total_quantity %> Tickets: $<%= @show.total_sales %></h2>
 
 <div id="musician_totals">
-  <h2>TOTAL REVENUE: $<%= @show.total_revenue %></h2>
-  <h2>Member Sales:</h2>
+  <hr>
+  <h2>MEMBER SALES:</h2>
   <hr>
   <% @show.musicians.distinct.each do |musician| %>
   <div id="musician-<%= musician.id %>">

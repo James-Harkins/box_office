@@ -3,7 +3,11 @@ class Show < ApplicationRecord
   has_many :tickets
   has_many :musicians, through: :tickets
 
-  def total_revenue
+  def total_sales
     tickets.sum(:cost)
+  end
+
+  def total_quantity 
+    tickets.sum(:quantity)
   end
 end
