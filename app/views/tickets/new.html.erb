@@ -1,0 +1,12 @@
+<%= form_with url: "/bands/#{@show.band_id}/shows/#{@show.id}/tickets/create", method: :post, local: true do |form| %>
+    <%= form.label :buyer %>
+    <%= form.text_field :buyer %>
+  
+    <%= form.label :quantity %>
+    <%= form.select :quantity, (1..10).to_a %>
+  
+    <%= form.label :musician %>
+    <%= form.select :musician, @show.musician_names %>
+  
+    <%= form.submit "Submit" %>
+  <% end %>

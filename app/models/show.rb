@@ -10,4 +10,8 @@ class Show < ApplicationRecord
   def total_quantity 
     tickets.sum(:quantity)
   end
+
+  def musician_names
+    band.musicians.distinct.map {|musician| musician.name}
+  end
 end

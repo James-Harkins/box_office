@@ -3,6 +3,8 @@
 <h2>TOTAL SALES:</h2>
 <h2><%= @show.total_quantity %> Tickets: $<%= @show.total_sales %></h2>
 
+<%= button_to "Add Tickets", "/bands/#{@show.band_id}/shows/#{@show.id}/tickets/new", method: :get %>
+
 <div id="musician_totals">
   <hr>
   <h2>MEMBER SALES:</h2>
