@@ -1,0 +1,26 @@
+<h1><%= @show.venue %></h1>
+<h2><%= @show.date %></h2>
+
+<div id="musician_totals">
+  <h2>TOTAL REVENUE: $<%= @show.total_revenue %></h2>
+  <h2>Member Sales:</h2>
+  <hr>
+  <% @show.musicians.distinct.each do |musician| %>
+  <div id="musician-<%= musician.id %>">
+    <h3><%= "#{musician.name}:" %></h3>
+    <h3><%= "#{musician.show_total_quantity(@show.id)} Tickets / $#{musician.show_total_cost(@show.id)}" %></h3>
+    <hr>
+  </div>
+  <% end %>
+</div>
+
+<div id="tickets">
+  <h2>TICKETS:</h2>
+  <hr>
+  <% @show.tickets.each do |ticket| %>
+  <div id="ticket-<%= ticket.id %>">
+    <h3><%= "#{ticket.buyer}: #{ticket.quantity} Tickets" %></h3>    
+    <hr>
+  </div>
+  <% end %>
+</div>

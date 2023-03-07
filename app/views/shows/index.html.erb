@@ -1,0 +1,8 @@
+<div id="shows">
+  <h1>Shows:</h1>
+  <% @shows.each do |show| %>
+  <div id="show-<%= show.id %>">
+    <h3><%= link_to "#{show.venue} - #{show.date}", "/bands/#{show.band_id}/shows/#{show.id}" %></h3>
+  </div>
+  <% end %>
+</div>
