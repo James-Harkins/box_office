@@ -1,24 +1,7 @@
-# README
+Box Office is a very simple app written to keep track of ticket sales for my [band's](http://kaepora.com/) gigs.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It is written in Ruby on Rails with enough HTML to successfully display some relevant information. I will add some basic styling eventually.
 
-Things you may want to cover:
+Database Schema: 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<img width="877" alt="image" src="https://user-images.githubusercontent.com/93609855/223564998-9fe14b24-0781-43a6-b175-30d2df3d0e4e.png">
