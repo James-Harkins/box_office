@@ -1,5 +1,5 @@
 <div id="bands">
-  <h1>Bands:</h1>
+  <h1>BANDS</h1>
   <% @bands.each do |band| %>
   <div id="band-<%= band.id %>">
     <h3><%= link_to "#{band.name}", "/bands/#{band.id}/shows" %></h3>

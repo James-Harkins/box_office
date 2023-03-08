@@ -1,0 +1,14 @@
+<h1>New Show:</h1>
+
+<%= form_with url: "/bands/#{@band.id}/shows/create", method: :post, local: true do |form| %>
+    <%= form.label :venue %>
+    <%= form.text_field :venue %><br>
+
+    <br><%= form.label :ticket_price, "Presale Ticket Price" %>
+    <%= form.number_field :ticket_price %><br>
+  
+    <br><%= form.label :event_date, "Event Date" %>
+    <%= form.date_select :event_date, order: [:month, :day, :year] %><br>
+  
+    <br><%= form.submit "Submit" %>
+  <% end %>
