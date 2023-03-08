@@ -8,23 +8,19 @@
 <div id="musician_totals">
   <hr>
   <h2>MEMBER SALES:</h2>
-  <hr>
   <% @show.musicians.distinct.each do |musician| %>
   <div id="musician-<%= musician.id %>">
-    <h3><%= "#{musician.name}:" %></h3>
-    <h3><%= "#{musician.show_total_quantity(@show.id)} Tickets / $#{musician.show_total_cost(@show.id)}" %></h3>
-    <hr>
+    <h3><%= "#{musician.name}: #{musician.show_total_quantity(@show.id)} Tickets / $#{musician.show_total_cost(@show.id)}" %></h3>
   </div>
   <% end %>
 </div>
 
 <div id="tickets">
+<hr>
   <h2>TICKETS:</h2>
-  <hr>
   <% @show.tickets.each do |ticket| %>
   <div id="ticket-<%= ticket.id %>">
     <h3><%= "#{ticket.buyer}: #{ticket.quantity} Tickets" %></h3>    
-    <hr>
   </div>
   <% end %>
 </div>
