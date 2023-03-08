@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get '/', to: 'bands#index'
+  post '/create', to: 'bands#create'
 
   resources :bands do 
+    get '/new', to: 'bands#new'
     get '/shows', to: 'shows#index'
     get '/shows/new', to: 'shows#new'
     post '/shows/create', to: 'shows#create'

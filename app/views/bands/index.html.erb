@@ -5,4 +5,5 @@
     <h3><%= link_to "#{band.name}", "/bands/#{band.id}/shows" %></h3>
   </div>
   <% end %>
+  <%= button_to "New Band", "/bands/new", method: :get %>
 </div>
