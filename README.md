@@ -1,6 +1,6 @@
 Box Office is a very simple app written to keep track of ticket sales for my [band's](http://kaepora.com/) gigs.
 
-It is written in Ruby on Rails with enough HTML to successfully display some relevant information. I will add some basic styling eventually.
+It is written in Ruby on Rails with enough HTML and CSS to successfully display some relevant information with basic styling. 
 
 Database Schema: 
 
