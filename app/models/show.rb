@@ -14,4 +14,8 @@ class Show < ApplicationRecord
   def musician_names
     band.musicians.distinct.map {|musician| musician.name}
   end
+
+  def alphabetized_tickets
+    tickets.order(:buyer)
+  end
 end

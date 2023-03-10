@@ -18,7 +18,7 @@
 <div id="tickets">
 <hr>
   <h2>TICKETS:</h2>
-  <% @show.tickets.each do |ticket| %>
+  <% @show.alphabetized_tickets.each do |ticket| %>
   <div id="ticket-<%= ticket.id %>">
     <h3><%= "#{ticket.buyer}: #{ticket.quantity} Tickets" %></h3>    
   </div>
